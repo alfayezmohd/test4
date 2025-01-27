@@ -21,7 +21,21 @@
                 <div id="token" class="mt-5"></div>
             </div>
         </div>
+	<div class="row">
+		<div class="col-md-12">
+			<button class="btn btn-secondary" id="subscribe" onclick="showBadge()">Show Badge</button>
+		</div>
+	</div>
     </div>
     <script src='app.js'></script>
+	<script type="text/javascript">
+		function showBadge(){
+			if(navigator.setAppBadge){
+				navigator.setAppBadge(3);
+			}else{
+				alert('Badge not supported!');
+			}
+		}
+	</script>
 </body>
 </html>
